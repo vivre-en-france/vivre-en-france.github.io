@@ -1,0 +1,18 @@
+<div class="branding">
+  <a class="logo-link" href="{{ "/" | relLangURL }}" aria-label="Aller à l'accueil">
+    <div class="logo" aria-hidden="true">
+      <span class="logo-flag"></span>
+      <span class="logo-monogram">VF</span>
+    </div>
+    <span class="sr-only">Vivre en France</span>
+  </a>
+  <div>
+    <p class="site-title">
+      <a href="{{ "/" | relLangURL }}">{{ site.Title }}</a>
+    </p>
+    {{ with site.Params.tagline }}
+      <p class="site-tagline">{{ . }}</p>
+    {{ end }}
+  </div>
+</div>
+{{ partial "menu.html" (dict "menuID" "main" "page" .) }}

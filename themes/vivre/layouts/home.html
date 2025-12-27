@@ -1,0 +1,49 @@
+{{ define "main" }}
+  <section class="hero">
+    <p class="eyebrow">Guides du quotidien, clairs et pratiques</p>
+    <h1>{{ site.Title }}</h1>
+    {{ with site.Params.tagline }}
+      <p class="lead">{{ . }}</p>
+    {{ end }}
+    <div class="hero-actions">
+      <a class="button" href="{{ "/posts/" | relLangURL }}">Lire les guides pratiques</a>
+      <a class="button secondary" href="{{ "/a-propos/" | relLangURL }}">Comprendre notre démarche</a>
+    </div>
+  </section>
+
+  {{ with .Content }}
+    <section class="intro-block">
+      {{ . }}
+    </section>
+  {{ end }}
+
+  {{ $posts := where site.RegularPages "Section" "posts" }}
+  <div class="section-heading">
+    <h2>Derniers guides</h2>
+    {{ if gt (len $posts) 0 }}
+      <a href="{{ "/posts/" | relLangURL }}">Voir tout</a>
+    {{ end }}
+  </div>
+
+  {{ if gt (len $posts) 0 }}
+    <div class="card-grid">
+      {{ range first 6 ($posts.ByDate.Reverse) }}
+        <article class="card">
+          <time datetime="{{ .Date | time.Format "2006-01-02" }}">{{ .Date | time.Format ":date_long" }}</time>
+          <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+          <p>{{ or .Description .Summary }}</p>
+          {{ with .Params.tags }}
+            <div class="tags">
+              {{ range . }}
+                <span class="tag">{{ . }}</span>
+              {{ end }}
+            </div>
+          {{ end }}
+          <a class="read-more" href="{{ .RelPermalink }}">Lire l'article →</a>
+        </article>
+      {{ end }}
+    </div>
+  {{ else }}
+    <p>Aucun article publié pour l'instant.</p>
+  {{ end }}
+{{ end }}

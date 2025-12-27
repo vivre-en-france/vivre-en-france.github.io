@@ -1,0 +1,9 @@
+<div class="footer-inner">
+  <div>
+    <strong>{{ site.Title }}</strong>
+    {{ with site.Params.footerNote }}
+      - {{ . }}
+    {{ end }}
+  </div>
+  <div>Copyright {{ now.Year }}</div>
+</div>

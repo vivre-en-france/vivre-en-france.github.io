@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="14" fill="#f2f4fb"/>
+  <rect x="10" y="10" width="44" height="44" rx="12" fill="#ffffff" stroke="#dfe4f2" stroke-width="1.5"/>
+  <rect x="16" y="16" width="10" height="32" rx="6" fill="#1f3b77"/>
+  <rect x="38" y="16" width="10" height="32" rx="6" fill="#e5483c"/>
+  <rect x="26" y="16" width="12" height="32" rx="6" fill="#f8f9fc" stroke="#e5e8f3" stroke-width="0.5"/>
+  <text x="32" y="38" text-anchor="middle" font-family="Arial, 'Helvetica Neue', sans-serif" font-size="12" font-weight="800" fill="#0c1a3a">VF</text>
+</svg>

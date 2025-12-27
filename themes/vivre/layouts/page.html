@@ -1,0 +1,56 @@
+{{ define "main" }}
+  {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+  {{ $dateHuman := .Date | time.Format ":date_long" }}
+  {{ $scratch := newScratch }}
+  {{ $scratch.Set "rec" (slice) }}
+  {{ range first 2 (.Site.RegularPages.Related .) }}
+    {{ $scratch.Add "rec" (slice .) }}
+  {{ end }}
+  {{ if lt (len ($scratch.Get "rec")) 2 }}
+    {{ range site.RegularPages.ByDate.Reverse }}
+      {{ if and (ne .Permalink $.Permalink) (not (in ($scratch.Get "rec") .)) }}
+        {{ $scratch.Add "rec" (slice .) }}
+      {{ end }}
+      {{ if ge (len ($scratch.Get "rec")) 2 }}{{ break }}{{ end }}
+    {{ end }}
+  {{ end }}
+  {{ $related := $scratch.Get "rec" }}
+  <article class="post">
+    <header>
+      <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+      <h1>{{ .Title }}</h1>
+      {{ with .Description }}
+        <p class="lead">{{ . }}</p>
+      {{ end }}
+      {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+    </header>
+    <div class="content">
+      {{ .Content }}
+    </div>
+  </article>
+
+  {{ if gt (len $related) 0 }}
+    <section class="related">
+      <div class="section-heading">
+        <h2>À lire aussi</h2>
+      </div>
+      <div class="card-grid">
+        {{ range $related }}
+          <article class="card">
+            <time datetime="{{ .Date | time.Format "2006-01-02" }}">{{ .Date | time.Format ":date_long" }}</time>
+            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            <p>{{ or .Description .Summary }}</p>
+            {{ with .Params.tags }}
+              <div class="tags">
+                {{ range first 3 . }}
+                  <span class="tag">{{ . }}</span>
+                {{ end }}
+              </div>
+            {{ end }}
+            <a class="read-more" href="{{ .RelPermalink }}">Lire l'article →</a>
+          </article>
+        {{ end }}
+      </div>
+    </section>
+  {{ end }}
+{{ end }}

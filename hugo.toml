@@ -1,0 +1,28 @@
+baseURL = "https://vivre-en-france.github.io/"
+languageCode = 'fr-fr'
+title = 'Vivre en France'
+theme = 'vivre'
+defaultContentLanguage = 'fr'
+enableRobotsTXT = true
+summaryLength = 30
+
+[pagination]
+pagerSize = 6
+
+[permalinks]
+posts = '/articles/:slug/'
+
+[params]
+tagline = "Décoder la culture, les codes sociaux et la vie quotidienne en France."
+footerNote = "Ressources éditoriales, sans publicité ni suivi intrusif."
+
+[menus]
+  [[menus.main]]
+  name = 'Articles'
+  pageRef = '/posts'
+  weight = 10
+
+  [[menus.main]]
+  name = 'À propos'
+  pageRef = '/a-propos'
+  weight = 20

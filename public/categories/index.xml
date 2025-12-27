@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Vivre en France</title>
+    <link>http://localhost:1313/categories/</link>
+    <description>Recent content in Categories on Vivre en France</description>
+    <generator>Hugo</generator>
+    <language>fr-fr</language>
+    <lastBuildDate>Sun, 07 Dec 2025 10:30:00 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vie Sociale</title>
+      <link>http://localhost:1313/categories/vie-sociale/</link>
+      <pubDate>Sun, 07 Dec 2025 10:30:00 +0100</pubDate>
+      <guid>http://localhost:1313/categories/vie-sociale/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fêtes &amp; Calendrier</title>
+      <link>http://localhost:1313/categories/f%C3%AAtes--calendrier/</link>
+      <pubDate>Sun, 21 Sep 2025 09:30:00 +0100</pubDate>
+      <guid>http://localhost:1313/categories/f%C3%AAtes--calendrier/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Culture</title>
+      <link>http://localhost:1313/categories/culture/</link>
+      <pubDate>Sun, 07 Sep 2025 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/categories/culture/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vie Quotidienne</title>
+      <link>http://localhost:1313/categories/vie-quotidienne/</link>
+      <pubDate>Sun, 17 Aug 2025 11:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/categories/vie-quotidienne/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Territoires</title>
+      <link>http://localhost:1313/categories/territoires/</link>
+      <pubDate>Sun, 03 Aug 2025 09:45:00 +0100</pubDate>
+      <guid>http://localhost:1313/categories/territoires/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Travail &amp; Rythmes</title>
+      <link>http://localhost:1313/categories/travail--rythmes/</link>
+      <pubDate>Sun, 11 May 2025 08:45:00 +0100</pubDate>
+      <guid>http://localhost:1313/categories/travail--rythmes/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vie Pratique</title>
+      <link>http://localhost:1313/categories/vie-pratique/</link>
+      <pubDate>Sun, 06 Apr 2025 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/categories/vie-pratique/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Société &amp; Débat</title>
+      <link>http://localhost:1313/categories/soci%C3%A9t%C3%A9--d%C3%A9bat/</link>
+      <pubDate>Sun, 16 Feb 2025 09:45:00 +0100</pubDate>
+      <guid>http://localhost:1313/categories/soci%C3%A9t%C3%A9--d%C3%A9bat/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Culture &amp; Coutumes</title>
+      <link>http://localhost:1313/categories/culture--coutumes/</link>
+      <pubDate>Sun, 12 Jan 2025 09:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/categories/culture--coutumes/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,31 @@
+{{ define "main" }}
+  <div class="section-heading">
+    <h1>{{ .Title }}</h1>
+  </div>
+  {{ with .Content }}
+    <div class="lead">{{ . }}</div>
+  {{ end }}
+
+  {{ $pages := .Pages.ByDate.Reverse }}
+  {{ if gt (len $pages) 0 }}
+    <div class="card-grid">
+      {{ range $pages }}
+        <article class="card">
+          <time datetime="{{ .Date | time.Format "2006-01-02" }}">{{ .Date | time.Format ":date_long" }}</time>
+          <h3><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h3>
+          <p>{{ or .Description .Summary }}</p>
+          {{ with .Params.tags }}
+            <div class="tags">
+              {{ range . }}
+                <span class="tag">{{ . }}</span>
+              {{ end }}
+            </div>
+          {{ end }}
+          <a class="read-more" href="{{ .RelPermalink }}">Lire l'article →</a>
+        </article>
+      {{ end }}
+    </div>
+  {{ else }}
+    <p>Aucun contenu publié dans cette section.</p>
+  {{ end }}
+{{ end }}
